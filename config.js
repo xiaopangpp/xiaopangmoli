@@ -276,4 +276,5 @@ var obj = {
     "冰晶古齿虎": "image/chihu.jpg",
     "暮雪尾兽": "image/暮雪尾兽.jpg",
     "仙草蘑灵": "image/仙草蘑灵.jpg",
+    "鹦鹉佛": "image/鹦鹉佛.jpg",
 }
