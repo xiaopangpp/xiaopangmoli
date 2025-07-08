@@ -172,12 +172,17 @@
     .selected-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
 
     .selected-item {
-      width: calc(50% - 5px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: calc(16.66% - 5px);
+      /* 100% / 6 - 间距 */
       margin-bottom: 10px;
+      overflow: hidden;
     }
 
     .selected-item img {
@@ -185,6 +190,25 @@
       height: 40px;
       object-fit: contain;
       margin-bottom: 5px;
+    }
+
+    .selected-item .pet-name {
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 5px;
+    }
+
+    .selected-item .pet-value {
+      font-size: 10px;
+      color: #666;
+      background: #f0f0f0;
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
     }
 
     .remove-btn {
