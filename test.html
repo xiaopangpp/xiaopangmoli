@@ -172,19 +172,12 @@
     .selected-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      max-height: 500px;
-      overflow-y: auto;
+      justify-content: space-between;
     }
 
     .selected-item {
-      background: #e6f7ff;
-      padding: 6px 12px;
-      border-radius: 4px;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      flex-direction: column;
+      width: calc(50% - 5px);
+      margin-bottom: 10px;
     }
 
     .selected-item img {
@@ -331,70 +324,63 @@
     /* 基础样式保持不变 */
 
     @media (max-width: 768px) {
-      body {
-        padding: 10px;
-      }
-
-      .container {
-        padding: 10px;
-      }
-
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .header-actions {
-        margin-bottom: 10px;
-      }
+      /* 其他样式保持不变 */
 
       .filter-container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
 
-      .filter-label {
+      .filter-btn {
+        margin-right: 5px;
         margin-bottom: 5px;
       }
 
-      .pet-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      }
-
-      .pet-card {
-        padding: 5px;
-      }
-
-      .pet-img {
-        width: 60px;
-        height: 60px;
-      }
-
       .selected-list {
-        max-height: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
       }
 
-      .selected-item {
-        padding: 5px 10px;
+      @media (max-width: 768px) {
+        /* 其他样式保持不变 */
+
+        .selected-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          width: calc(50% - 5px);
+          margin-bottom: 10px;
+          overflow: hidden;
+        }
+
+        .selected-item img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          margin-bottom: 5px;
+        }
+
+        .selected-item .pet-name {
+          font-size: 12px;
+          font-weight: 500;
+          margin-bottom: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0 5px;
+        }
+
+        .selected-item .pet-value {
+          font-size: 10px;
+          color: #666;
+          background: #f0f0f0;
+          display: inline-block;
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
       }
 
-      .selected-item img {
-        width: 30px;
-        height: 30px;
-      }
-
-      .history-item {
-        padding: 10px;
-      }
-
-      .history-pet {
-        padding: 3px 8px;
-      }
-
-      .history-pet img {
-        width: 15px;
-        height: 15px;
-      }
     }
   </style>
 </head>
@@ -459,6 +445,7 @@
   <script src="./config.js"></script>
   <script>
     let allSelectedPets = [];
+    // var obj = {}
     const petConfig = {
       "3": [
         "多角铃鹿", "暗毁灭伯爵", "赤炎飞龙 物攻", "格兰酋长", "超人鸭吉吉", "艾米", "骨龙", "萌之王者",
