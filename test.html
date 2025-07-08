@@ -314,6 +314,18 @@
       border-radius: 4px;
       width: 200px;
     }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
   </style>
 </head>
 
@@ -321,8 +333,8 @@
   <div class="container">
     <div class="header">
       <div class="header-actions">
-        <button class="btn btn-reset" onclick="resetCurrentSelection()">重置本轮</button>
-        <button class="btn btn-save" onclick="saveCurrentSelection()">保存记录</button>
+        <button class="btn btn-reset" onclick="resetCurrentSelection()">重置已选</button>
+        <button class="btn btn-save" onclick="saveCurrentSelection()">保存本轮</button>
       </div>
       <h2>魔力值计算器</h2>
     </div>
@@ -362,16 +374,12 @@
     <div class="pet-grid" id="petGrid">
       <!-- 宠物卡片将通过JS动态生成 -->
     </div>
-
-    <div class="error" id="maxCountError">最多只能选择 6 个宠物！</div>
-    <div class="error" id="sumError">魔力值总和超过 16！</div>
-
     <div class="history">
       <h3>历史记录</h3>
       <div id="historyContainer">
         <p>暂无记录</p>
       </div>
-      <button class="btn btn-reset" onclick="clearAllHistory()">清空所有记录</button>
+      <button class="btn btn-reset" onclick="clearAllHistory()">清空对局</button>
     </div>
   </div>
 
@@ -380,8 +388,8 @@
   </div>
   <script src="./config.js"></script>
   <script>
-  //  var obj =  {}
-   let allSelectedPets = [];
+    //  var obj =  {}
+    let allSelectedPets = [];
     const petConfig = {
       "3": [
         "多角铃鹿", "暗毁灭伯爵", "赤炎飞龙 物攻", "格兰酋长", "超人鸭吉吉", "艾米", "骨龙", "萌之王者",
@@ -445,7 +453,7 @@
       });
     }
 
-    const slbConfig = petConfig["圣龙杯魔力值玩法（魔力值总和不超16）"];
+    const slbConfig = petConfig["魔力值玩法（魔力值总和不超16）"];
     // 构建宠物名称到魔力值的映射
     const petValueMap = {};
     allPets.forEach(pet => {
@@ -477,6 +485,16 @@
     renderHistory();
     updateTotal();
     setupFilterButtons();
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = message;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, 1500);
+    }
 
     // 渲染宠物网格
     function renderPetGrid() {
@@ -549,8 +567,7 @@
       } else {
         // 限制最多6个
         if (selectedPets.length >= 6) {
-          maxCountError.style.display = 'block';
-          setTimeout(() => maxCountError.style.display = 'none', 2000);
+          showToast('最多只能选择 6 个宠物！');
           return;
         }
 
@@ -560,7 +577,11 @@
       }
 
       // 检查总和是否超过16
-      sumError.style.display = selectedPets.length === 6 && total > 16 ? 'block' : 'none';
+      if (selectedPets.length === 6 && total > 16) {
+        showToast('魔力值总和超过 16！');
+        total -= petValueMap[petName].value;
+        selectedPets.pop();
+      }
 
       // 更新UI
       renderPetGrid();
@@ -618,17 +639,17 @@
     // 保存当前选择到历史
     function saveCurrentSelection() {
       if (selectedPets.length === 0) {
-        alert('请先选择宠物！');
+        showToast('请先选择宠物！');
         return;
       }
 
       if (selectedPets.length > 6) {
-        alert('最多只能选择6个宠物！');
+        showToast('最多只能选择6个宠物！');
         return;
       }
 
       if (total > 16) {
-        alert('魔力值总和不能超过16！');
+        showToast('魔力值总和不能超过16！');
         return;
       }
 
@@ -648,7 +669,7 @@
       // 重置当前选择
       resetCurrentSelection();
 
-      alert('已保存记录！');
+      showToast('已保存记录！');
     }
 
     // 渲染历史记录
