@@ -319,13 +319,82 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
       background-color: #333;
       color: white;
       padding: 10px 20px;
       border-radius: 4px;
       font-size: 16px;
       z-index: 1000;
+    }
+
+    /* 基础样式保持不变 */
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-actions {
+        margin-bottom: 10px;
+      }
+
+      .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .filter-label {
+        margin-bottom: 5px;
+      }
+
+      .pet-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .pet-card {
+        padding: 5px;
+      }
+
+      .pet-img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .selected-list {
+        max-height: 300px;
+      }
+
+      .selected-item {
+        padding: 5px 10px;
+      }
+
+      .selected-item img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .history-item {
+        padding: 10px;
+      }
+
+      .history-pet {
+        padding: 3px 8px;
+      }
+
+      .history-pet img {
+        width: 15px;
+        height: 15px;
+      }
     }
   </style>
 </head>
@@ -780,7 +849,7 @@
 
       const foundPet = allPets.find(pet => pet.name.toLowerCase().includes(searchTerm));
       if (foundPet) {
-        currentFilter = foundPet.value.toString();
+        currentFilter = 'all'; // 清除当前筛选条件
         setupFilterButtons();
         renderPetGrid();
 
@@ -790,6 +859,7 @@
         }
       }
     }
+
   </script>
 </body>
 
