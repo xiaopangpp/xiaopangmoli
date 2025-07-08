@@ -317,13 +317,14 @@
 
     .toast {
       position: fixed;
-      bottom: 20px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%,-50%);
       background-color: #333;
       color: white;
       padding: 10px 20px;
       border-radius: 4px;
+      font-size: 16px;
       z-index: 1000;
     }
   </style>
@@ -388,7 +389,6 @@
   </div>
   <script src="./config.js"></script>
   <script>
-     var obj =  {}
     let allSelectedPets = [];
     const petConfig = {
       "3": [
@@ -427,7 +427,7 @@
         "艾不败", "熊猫拳王", "圣诞鸭吉吉", "红萝卜兔", "海洋之神", "仲裁弗兰克", "幽游娃娃", "桃面鼠", "超能丘比特", "深海霸主", "烈火狂兽", "智慧帕特拉",
         "帝王雪狮", '昏睡纺锤'
       ],
-      "5": ["火云神", "冰龙王", "图灵", "武斗酷猫", "雪顶妖兽", "赤炎飞龙", "英魂修罗"],
+      "5": ["火云神", "冰龙王", "图灵", "武斗酷猫 电磁猫", "雪顶妖兽", "赤炎飞龙", "英魂修罗"],
       "4.5": ["永恒冈尼尔", "傲雪冰灵", "喷火猿"],
       "1": ["其余宠物"],
       "4": [
