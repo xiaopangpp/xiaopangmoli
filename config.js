@@ -270,7 +270,7 @@ var obj = {
     "帝王雪狮": "/1106/011I0355611.gif",
     "昏睡纺锤": "/1210/29141H34K8.gif",
     "水晶鹿": "https://newsimg.5054399.com/uploads/litimg/151125/16044R554H2.gif",
-    "天球": "https://bkimg.cdn.bcebos.com/pic/0ff41bd5ad6eddc451da26162e90a1fd5266d1169581?x-bce-process=image/format,f_auto/quality,Q_70/resize,m_lfit,limit_1,w_536",
+    "天球": "https://bkimg.cdn.bcebos.com/pic/0824ab18972bd40735fa57106cc289510fb30e24a381",
     "冰翼晶灵": "https://bkimg.cdn.bcebos.com/pic/b7fd5266d0160924ab18a83a524d22fae6cd7b899ef2?x-bce-process=image/format,f_auto/quality,Q_70/resize,m_lfit,limit_1,w_536",
     "魔晶凤凰": "https://bkimg.cdn.bcebos.com/pic/b8014a90f603738da97730295752a751f8198618462c?x-bce-process=image/format,f_auto/quality,Q_70/resize,m_lfit,limit_1,w_536"
 }
