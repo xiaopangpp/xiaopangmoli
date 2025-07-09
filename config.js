@@ -1465,7 +1465,7 @@ var allPets = [
         "img": "images/其余宠物.jpg"
     }
 ]
-allPets = allPets.map(item=>{
-    item.img = ''
-    return item
-})
+// allPets = allPets.map(item=>{
+//     item.img = ''
+//     return item
+// })

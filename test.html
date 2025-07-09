@@ -783,6 +783,7 @@
       saveToLocalStorage();
     }
     function copyToClipboard(text) {
+      text = text.split(' ')[0];
       navigator.clipboard.writeText(text).then(() => {
         showToast('已复制名称');
       }).catch(err => {
