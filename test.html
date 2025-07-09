@@ -469,7 +469,7 @@
           flex-direction: column;
           align-items: center;
           text-align: center;
-          width: calc(50% - 5px);
+          width: calc(50% - 20px);
           margin-bottom: 10px;
           overflow: hidden;
         }
@@ -609,7 +609,7 @@
         "永夜战龙", "烟斗船长", "参天蓬蓬", "武斗宰相", "鲁特", "怒火兽", "仙音", "丰羽嘴龙", "痛苦电环", "霹雳领主", "灵魂守护", "烈火飞龙", "精灵多哥",
         "饮雪狂兽", "圣诞老人", "树人守护", "帝米亚", "伊兰亚龙", "林中鹤仙", "长弓射手", "巴斯特", "美鹅鹅", "念珠鹤", "绅士鸡", "岩凯领主", "炮塔瓢虫",
         "格兰球", "奇丽果", "美豆豆", "米花", "千年雪莲", "蔓藤兽", "绿衣小葵", "白发露露", "空灵斗士", "碧翎离朱", "石化木登", "动感小子", "小天使安琪",
-        "草莓寄居蟹", "萤火仙子", "冰钻布鲁斯", "刺头哭眼鸭", "帕恩", "财神企鹅", "红桃雀后", "机械蛮牛", "瞌睡王", "霸道把总", "暴角龙", "火龙大亨", "幽冥之眼"
+        "草莓寄居蟹", "萤火仙子", "冰钻布鲁斯", "刺头哭眼鸭", "帕恩", "财神企鹅", "红桃雀后", "机械蛮牛", "瞌睡王", "霸道把总", "暴角龙", "火龙大亨", "幽冥之眼", '脆皮鸡弟弟', '脆皮鸡哥哥', '蛇王'
       ],
       "2": [
         "神圣青龙", "神圣人鱼", "巨翎天鹅", "绿萝魔灵", "串鱼巨蟹", "皇家狮鹫", "上古战龙", "水球球", "冰翼邪神", "雪影娃娃", "毁灭笔记", "黄蜂后",
@@ -618,7 +618,7 @@
         "魔瓜头领", "水晶巨人", "欢悦吉他", "酷拉", "火麒麟", "美妖狐", "布莱克岩", "逍遥呱呱", "紫霸龙", "蓝焰幽灵主", "彩蝶鲨", "凡鹰",
         "骷髅法师", "超能阿布", "魔爪圣灵", "米陶诺斯", "猪蜻蜓", "魔尾战猫", "科多索", "迷你利乌", "蒜头熊族长", "圣冠布鲁斯", "雪精灵", "幽蝠王子",
         "艾不败", "熊猫拳王", "圣诞鸭吉吉", "红萝卜兔", "海洋之神", "仲裁弗兰克", "幽游娃娃", "桃面鼠", "超能丘比特", "深海霸主", "烈火狂兽", "智慧帕特拉",
-        "帝王雪狮", '昏睡纺锤'
+        "帝王雪狮", '昏睡纺锤', '恶魔狼蛛'
       ],
       "5": ["火云神", "冰龙王", "图灵", "武斗酷猫 电磁猫", "雪顶妖兽", "赤炎飞龙", "英魂修罗"],
       "4.5": ["永恒冈尼尔", "傲雪冰灵", "喷火猿"],
@@ -722,16 +722,17 @@
 
 
     function applyValueFilter() {
-      const valueFilter = document.getElementById('valueFilter').value;
-      const maxValueElement = document.getElementById('maxValue');
-      maxValueElement.textContent = valueFilter; // 更新当前筛选值
-
-      if (history.length === 0) {
-        renderPetGrid(filteredPets);
-      } else {
+      if (history.length > 0) {
         showToast('对局开始后无法修改筛选条件');
+        return;
       }
+
+      const valueFilter = document.getElementById('valueFilter').value;
+      const filteredPets = allPets.filter(pet => pet.value <= valueFilter);
+
+      renderPetGrid(filteredPets);
     }
+
 
     // 修改renderPetGrid函数，接受一个可选的filteredPets参数：
 
@@ -850,7 +851,7 @@
         item.innerHTML = `
                 <img src="${petValueMap[petName]?.img}" alt="${petName}">
                 ${petName} (${petValueMap[petName]?.value})
-                <span class="remove-btn" onclick="removePet(${index})">×</span>
+                <span class="remove-btn" onclick="removePet(${index},event)">×</span>
             `;
         item.addEventListener('click', () => copyToClipboard(petName));
         selectedList.appendChild(item);
