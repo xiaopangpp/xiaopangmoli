@@ -582,7 +582,7 @@
   <script src="./config.js"></script>
   <script>
     let allSelectedPets = [];
-    var obj = {}
+    // var obj = {}
     const petConfig = {
       "3": [
         "多角铃鹿", "暗毁灭伯爵", "赤炎飞龙 物攻", "格兰酋长", "超人鸭吉吉", "艾米", "骨龙", "萌之王者",
@@ -704,17 +704,23 @@
 
       filteredPets.forEach(pet => {
         const isSelected = selectedPets.includes(pet.name);
+        const isDisabled = allSelectedPets.includes(pet.name);
         const card = document.createElement('div');
-        card.className = `pet-card ${isSelected ? 'selected' : ''} ${isSelected ? 'disabled' : ''}`;
+        card.className = `pet-card ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`;
         card.innerHTML = `
-                    <img src="${pet.img}" class="pet-img">
-                    <div class="pet-name">${pet.name}</div>
-                    <div class="pet-value">魔力值: ${pet.value}</div>
-                `;
-        card.addEventListener('click', () => togglePetSelection(pet.name));
+                <img src="${pet.img}" alt="${pet.name}" class="pet-img">
+                <div class="pet-name">${pet.name}</div>
+                <div class="pet-value">魔力值: ${pet.value}</div>
+            `;
+        if (!isDisabled) {
+          card.addEventListener('click', () => togglePetSelection(pet.name));
+        }
         petGrid.appendChild(card);
       });
     }
+
+
+
     function applyValueFilter() {
       const valueFilter = document.getElementById('valueFilter').value;
       const maxValueElement = document.getElementById('maxValue');
@@ -966,6 +972,14 @@
 
 
     // 从历史记录中删除单个宠物
+    function removeHistory(index) {
+      history.splice(index, 1);
+      localStorage.setItem('selectionHistory', JSON.stringify(history));
+      allSelectedPets = history.flatMap(record => record.pets); // 更新allSelectedPets数组
+      renderHistory();
+      renderPetGrid();
+    }
+
     function removePetFromHistory(historyIndex, petIndex) {
       const record = history[historyIndex];
       const petName = record.pets[petIndex];
@@ -977,8 +991,9 @@
       }
 
       localStorage.setItem('selectionHistory', JSON.stringify(history));
+      allSelectedPets = history.flatMap(record => record.pets); // 更新allSelectedPets数组
       renderHistory();
-      renderPetGrid(); // 添加这行代码
+      renderPetGrid();
     }
 
 
