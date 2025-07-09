@@ -22,6 +22,25 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
+    .highlight {
+      animation: highlight 2s infinite alternate;
+    }
+
+    @keyframes highlight {
+      0% {
+        border-image: linear-gradient(45deg, #800080, #0000ff) 1;
+      }
+
+      50% {
+        border-image: linear-gradient(45deg, #800080, #0000ff) 1;
+      }
+
+      100% {
+        border-image: linear-gradient(45deg, #800080, #0000ff) 1;
+      }
+    }
+
+
     .header {
       display: flex;
       justify-content: space-between;
@@ -175,15 +194,47 @@
     }
 
     .selected-item {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       width: calc(16.66% - 5px);
-      /* 100% / 6 - 间距 */
       margin-bottom: 10px;
       overflow: hidden;
+      background-color: #e6f7ff;
+      /* 选中特效背景 */
+      border-radius: 8px;
+      padding: 10px;
     }
+
+    .selected-item .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      margin-left: 0;
+      color: #f5222d;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      /* 增大字体大小 */
+      width: 24px;
+      /* 设置宽度 */
+      height: 24px;
+      /* 设置高度 */
+      line-height: 24px;
+      /* 设置行高，使其垂直居中 */
+      text-align: center;
+      /* 文本居中 */
+      border-radius: 50%;
+      /* 圆形按钮 */
+      background-color: white;
+      /* 背景颜色 */
+      border: 1px solid #ddd;
+      /* 边框 */
+    }
+
+
 
     .selected-item img {
       width: 40px;
@@ -332,6 +383,50 @@
       width: 200px;
     }
 
+    .search-results {
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .search-results.hidden {
+      display: none;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .search-results .search-result-item {
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    .search-results .search-result-item:hover {
+      background-color: #f5f5f5;
+    }
+
+    .filter-container {
+      /* position: absolute; */
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .value-filter {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100px;
+    }
+
+
     .toast {
       position: fixed;
       top: 50%;
@@ -344,6 +439,7 @@
       font-size: 16px;
       z-index: 1000;
     }
+
 
     /* 基础样式保持不变 */
 
@@ -418,14 +514,30 @@
       </div>
       <h2>魔力值计算器</h2>
     </div>
-
+    <div>设置魔力值</div>
+    <select id="valueFilter" class="value-filter" onchange="applyValueFilter()">
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+    </select>
     <div class="rule-note">
-      魔力值玩法规则：魔力值总和不超过16，最多选择6个宠物
+      魔力值玩法规则：魔力值总和不超过<span id="maxValue">16</span>，最多选择6个宠物
     </div>
+
 
     <div class="search-container">
       <input type="text" class="search-input" id="searchInput" placeholder="搜索宠物" oninput="searchPets()">
+      <div id="searchResults" class="search-results hidden"></div>
     </div>
+
+
 
     <div class="selected-pets">
       <div class="selected-title">已选宠物（最多6个）</div>
@@ -451,6 +563,7 @@
       <button class="filter-btn" data-value="1">1</button>
     </div>
 
+
     <div class="pet-grid" id="petGrid">
       <!-- 宠物卡片将通过JS动态生成 -->
     </div>
@@ -469,7 +582,7 @@
   <script src="./config.js"></script>
   <script>
     let allSelectedPets = [];
-    // var obj = {}
+    var obj = {}
     const petConfig = {
       "3": [
         "多角铃鹿", "暗毁灭伯爵", "赤炎飞龙 物攻", "格兰酋长", "超人鸭吉吉", "艾米", "骨龙", "萌之王者",
@@ -533,7 +646,6 @@
       });
     }
 
-    const slbConfig = petConfig["魔力值玩法（魔力值总和不超16）"];
     // 构建宠物名称到魔力值的映射
     const petValueMap = {};
     allPets.forEach(pet => {
@@ -595,7 +707,7 @@
         const card = document.createElement('div');
         card.className = `pet-card ${isSelected ? 'selected' : ''} ${isSelected ? 'disabled' : ''}`;
         card.innerHTML = `
-                    <img src="${pet.img}" alt="${pet.name}" class="pet-img">
+                    <img src="${pet.img}" class="pet-img">
                     <div class="pet-name">${pet.name}</div>
                     <div class="pet-value">魔力值: ${pet.value}</div>
                 `;
@@ -603,6 +715,46 @@
         petGrid.appendChild(card);
       });
     }
+    function applyValueFilter() {
+      const valueFilter = document.getElementById('valueFilter').value;
+      const maxValueElement = document.getElementById('maxValue');
+      maxValueElement.textContent = valueFilter; // 更新当前筛选值
+
+      if (history.length === 0) {
+        renderPetGrid(filteredPets);
+      } else {
+        showToast('对局开始后无法修改筛选条件');
+      }
+    }
+
+    // 修改renderPetGrid函数，接受一个可选的filteredPets参数：
+
+    function renderPetGrid(filteredPets = allPets) {
+      petGrid.innerHTML = '';
+
+      // 使用filteredPets参数来渲染宠物网格
+      const petsToRender = filteredPets;
+
+      if (petsToRender.length === 0) {
+        petGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #666;">暂无符合条件的宠物</div>';
+        return;
+      }
+
+      petsToRender.forEach(pet => {
+        const isSelected = selectedPets.includes(pet.name);
+        const card = document.createElement('div');
+        card.className = `pet-card ${isSelected ? 'selected' : ''} ${isSelected ? 'disabled' : ''}`;
+        card.innerHTML = `
+                <img src="${pet.img}" alt="${pet.name}" class="pet-img">
+                <div class="pet-name">${pet.name}</div>
+                <div class="pet-value">魔力值: ${pet.value}</div>
+            `;
+        card.addEventListener('click', () => togglePetSelection(pet.name));
+        petGrid.appendChild(card);
+      });
+    }
+
+
     function renderPetGrid() {
       petGrid.innerHTML = '';
 
@@ -656,18 +808,25 @@
         total += petValueMap[petName].value;
       }
 
-      // 检查总和是否超过16
-      if (selectedPets.length === 6 && total > 16) {
-        showToast('魔力值总和超过 16！');
+      // 检查总和是否超过当前筛选值
+      const valueFilter = document.getElementById('valueFilter').value;
+      if (selectedPets.length === 6 && total > valueFilter) {
+        showToast(`魔力值总和超过 ${valueFilter}！`);
         total -= petValueMap[petName].value;
         selectedPets.pop();
       }
-
       // 更新UI
       renderPetGrid();
       renderSelectedPets();
       updateTotal();
       saveToLocalStorage();
+    }
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('已复制名称');
+      }).catch(err => {
+        console.error('复制失败:', err);
+      });
     }
 
     // 渲染已选宠物列表
@@ -683,16 +842,19 @@
         const item = document.createElement('div');
         item.className = 'selected-item';
         item.innerHTML = `
-                    <img src="${petValueMap[petName]?.img}" alt="${petName}">
-                    ${petName} (${petValueMap[petName]?.value})
-                    <span class="remove-btn" onclick="removePet(${index})">×</span>
-                `;
+                <img src="${petValueMap[petName]?.img}" alt="${petName}">
+                ${petName} (${petValueMap[petName]?.value})
+                <span class="remove-btn" onclick="removePet(${index})">×</span>
+            `;
+        item.addEventListener('click', () => copyToClipboard(petName));
         selectedList.appendChild(item);
       });
     }
 
+
     // 移除已选宠物
-    function removePet(index) {
+    function removePet(index, event) {
+      event.stopPropagation(); // 阻止事件冒泡
       total -= petValueMap[selectedPets[index]].value;
       selectedPets.splice(index, 1);
       renderPetGrid();
@@ -727,9 +889,9 @@
         showToast('最多只能选择6个宠物！');
         return;
       }
-
-      if (total > 16) {
-        showToast('魔力值总和不能超过16！');
+      const valueFilter = document.getElementById('valueFilter').value;
+      if (total > valueFilter) {
+        showToast(`魔力值总和不能超过${valueFilter}！`);
         return;
       }
 
@@ -799,7 +961,9 @@
       history.splice(index, 1);
       localStorage.setItem('selectionHistory', JSON.stringify(history));
       renderHistory();
+      renderPetGrid(); // 添加这行代码
     }
+
 
     // 从历史记录中删除单个宠物
     function removePetFromHistory(historyIndex, petIndex) {
@@ -814,7 +978,9 @@
 
       localStorage.setItem('selectionHistory', JSON.stringify(history));
       renderHistory();
+      renderPetGrid(); // 添加这行代码
     }
+
 
     // 清空所有历史记录
     function clearAllHistory() {
@@ -851,25 +1017,48 @@
     // 搜索宠物
     function searchPets() {
       const searchTerm = searchInput.value.trim().toLowerCase();
+      const searchResults = document.getElementById('searchResults');
+      searchResults.innerHTML = '';
+
       if (searchTerm === '') {
+        searchResults.classList.add('hidden');
         currentFilter = 'all';
         setupFilterButtons();
         renderPetGrid();
         return;
       }
 
-      const foundPet = allPets.find(pet => pet.name.toLowerCase().includes(searchTerm));
-      if (foundPet) {
-        currentFilter = 'all'; // 清除当前筛选条件
-        setupFilterButtons();
-        renderPetGrid();
+      const foundPets = allPets.filter(pet => pet.name.toLowerCase().includes(searchTerm));
 
-        const petCard = Array.from(petGrid.children).find(card => card.querySelector('.pet-name').textContent === foundPet.name);
-        if (petCard) {
-          petCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+      if (foundPets.length > 0) {
+        foundPets.forEach(pet => {
+          const item = document.createElement('div');
+          item.className = 'search-result-item';
+          item.textContent = pet.name;
+          item.addEventListener('click', () => selectPet(pet.name));
+          searchResults.appendChild(item);
+        });
+        searchResults.classList.remove('hidden');
+      } else {
+        searchResults.classList.add('hidden');
       }
     }
+
+    function selectPet(petName) {
+      const petCard = Array.from(petGrid.children).find(card => card.querySelector('.pet-name').textContent === petName);
+      if (petCard) {
+        // 移除之前的高亮类
+        const highlightedCard = document.querySelector('.highlight');
+        if (highlightedCard) {
+          highlightedCard.classList.remove('highlight');
+        }
+
+        petCard.classList.add('highlight');
+        petCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+
 
   </script>
 </body>
