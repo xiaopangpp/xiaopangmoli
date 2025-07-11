@@ -1,1471 +1,1467 @@
-var allPets = [
+ [
     {
         "name": "多角铃鹿",
         "value": 3,
-        "img": "images/多角铃鹿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0116435I319.gif"
     },
     {
         "name": "暗毁灭伯爵",
         "value": 3,
-        "img": "images/暗毁灭伯爵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/1214100UZ4.gif"
     },
     {
         "name": "赤炎飞龙 物攻",
         "value": 3,
-        "img": "images/赤炎飞龙 物攻.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1306/061103515927.gif"
     },
     {
         "name": "格兰酋长",
         "value": 3,
-        "img": "images/格兰酋长.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/131S40B5a.gif"
     },
     {
         "name": "超人鸭吉吉",
         "value": 3,
-        "img": "images/超人鸭吉吉.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1410/1G454392b8.gif"
     },
     {
         "name": "艾米",
         "value": 3,
-        "img": "images/艾米.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/12095RG607.gif"
     },
     {
         "name": "骨龙",
         "value": 3,
-        "img": "images/骨龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1212/311T2332102.gif"
     },
     {
         "name": "萌之王者",
         "value": 3,
-        "img": "images/萌之王者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1301/041054055P0.gif"
     },
     {
         "name": "圣龙阿布",
         "value": 3,
-        "img": "images/圣龙阿布.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/291131064333.gif"
     },
     {
         "name": "利爪黑熊",
         "value": 3,
-        "img": "images/利爪黑熊.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/0910350310A.gif"
     },
     {
         "name": "圣藤草王",
         "value": 3,
-        "img": "images/圣藤草王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/0913204R152.gif"
     },
     {
         "name": "上古猛犸象",
         "value": 3,
-        "img": "images/上古猛犸象.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/16195522a25.gif"
     },
     {
         "name": "立方人",
         "value": 3,
-        "img": "images/立方人.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/1Q63245I28.gif"
     },
     {
         "name": "金刚紫贝",
         "value": 3,
-        "img": "images/金刚紫贝.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1404/3009441a5L.gif"
     },
     {
         "name": "少林呱呱",
         "value": 3,
-        "img": "images/少林呱呱.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01154541I40.gif"
     },
     {
         "name": "罗卡德",
         "value": 3,
-        "img": "images/罗卡德.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011H00K463.gif"
     },
     {
         "name": "圣水守护",
         "value": 3,
-        "img": "images/圣水守护.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/1613054K360.gif"
     },
     {
         "name": "九尾神狐",
         "value": 3,
-        "img": "images/九尾神狐.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/2G443405C3.gif"
     },
     {
         "name": "超导缇塔",
         "value": 3,
-        "img": "images/超导缇塔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011G9391135.gif"
     },
     {
         "name": "不败雷瓦汀",
         "value": 3,
-        "img": "images/不败雷瓦汀.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/100956293414.gif"
     },
     {
         "name": "无敌胖胖猪",
         "value": 3,
-        "img": "images/无敌胖胖猪.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1402/1914531H050.gif"
     },
     {
         "name": "肚兜面罩鼠",
         "value": 3,
-        "img": "images/肚兜面罩鼠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0116331535C.gif"
     },
     {
         "name": "糯米头领",
         "value": 3,
-        "img": "images/糯米头领.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0312125R092.gif"
     },
     {
         "name": "菲尼克斯",
         "value": 3,
-        "img": "images/菲尼克斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/30140H31129.gif"
     },
     {
         "name": "狼烟之魂",
         "value": 3,
-        "img": "images/狼烟之魂.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011134312Q9.gif"
     },
     {
         "name": "天鹅领主",
         "value": 3,
-        "img": "images/天鹅领主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161959296428.gif"
     },
     {
         "name": "远古战神",
         "value": 3,
-        "img": "images/远古战神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/1ZS105V12.gif"
     },
     {
         "name": "怪钉洛萨",
         "value": 3,
-        "img": "images/怪钉洛萨.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1308/2R134402950.gif"
     },
     {
         "name": "云雾仙子",
         "value": 3,
-        "img": "images/云雾仙子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1403/20113924F00.gif"
     },
     {
         "name": "帕尔萨斯",
         "value": 3,
-        "img": "images/帕尔萨斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/241T530M96.gif"
     },
     {
         "name": "霹雳球",
         "value": 3,
-        "img": "images/霹雳球.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011213123916.gif"
     },
     {
         "name": "盗圣黑萨姆",
         "value": 3,
-        "img": "images/盗圣黑萨姆.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1503/041U32525T.gif"
     },
     {
         "name": "船长马库斯",
         "value": 3,
-        "img": "images/船长马库斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1503/111A52115M.gif"
     },
     {
         "name": "八爪海皇",
         "value": 3,
-        "img": "images/八爪海皇.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/240942333Z6.gif"
     },
     {
         "name": "巨魔狂鲨",
         "value": 3,
-        "img": "images/巨魔狂鲨.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1408/201U512IF.gif"
     },
     {
         "name": "暗夜骑士",
         "value": 3,
-        "img": "images/暗夜骑士.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/1GPS14917.gif"
     },
     {
         "name": "惊涛波塞尔",
         "value": 3,
-        "img": "images/惊涛波塞尔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/291T31c252.gif"
     },
     {
         "name": "贝古斯",
         "value": 3,
-        "img": "images/贝古斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/291451525493.gif"
     },
     {
         "name": "王者奎托斯",
         "value": 3,
-        "img": "images/王者奎托斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1411/1219363U017.gif"
     },
     {
         "name": "萝卜老翁",
         "value": 3,
-        "img": "images/萝卜老翁.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011200123633.gif"
     },
     {
         "name": "霹雳旋风鼠",
         "value": 3,
-        "img": "images/霹雳旋风鼠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011643353317.gif"
     },
     {
         "name": "巨岩先知",
         "value": 3,
-        "img": "images/巨岩先知.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/0H0044SM5.gif"
     },
     {
         "name": "火爆猴",
         "value": 3.5,
-        "img": "images/火爆猴.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011G410O15.gif"
     },
     {
         "name": "火云战马",
         "value": 3.5,
-        "img": "images/火云战马.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01142F51504.gif"
     },
     {
         "name": "巴拉姆",
         "value": 3.5,
-        "img": "images/巴拉姆.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1501/141P4243418.gif"
     },
     {
         "name": "烈火战神",
         "value": 3.5,
-        "img": "images/烈火战神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161545146452.gif"
     },
     {
         "name": "超级瓦斯",
         "value": 3.5,
-        "img": "images/超级瓦斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1310/161552292460.gif"
     },
     {
         "name": "石化刺蜥蜴",
         "value": 3.5,
-        "img": "images/石化刺蜥蜴.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152623Y93.gif"
     },
     {
         "name": "深渊黑迪斯",
         "value": 3.5,
-        "img": "images/深渊黑迪斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1403/2009445E920.gif"
     },
     {
         "name": "大力神",
         "value": 3.5,
-        "img": "images/大力神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152RU353.gif"
     },
     {
         "name": "金宝宝",
         "value": 3.5,
-        "img": "images/金宝宝.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152I55595.gif"
     },
     {
         "name": "月夜行者",
         "value": 3.5,
-        "img": "images/月夜行者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/302042353346.gif"
     },
     {
         "name": "法老王",
         "value": 3.5,
-        "img": "images/法老王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1505/291546106114.gif"
     },
     {
         "name": "奥德诺",
         "value": 3.5,
-        "img": "images/奥德诺.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1502/050934594515.gif"
     },
     {
         "name": "蓝衣夜灵",
         "value": 3.5,
-        "img": "images/蓝衣夜灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011525292026.gif"
     },
     {
         "name": "圣羽翼王",
         "value": 3.5,
-        "img": "images/圣羽翼王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/3016401D3L.gif"
     },
     {
         "name": "魔晶凤凰",
         "value": 3.5,
-        "img": "images/魔晶凤凰.jpg"
+        "img": "image/mojingfenghuang.jpg"
     },
     {
         "name": "恶魔战士",
         "value": 3.5,
-        "img": "images/恶魔战士.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011I4121530.gif"
     },
     {
         "name": "雷霆妙尔尼",
         "value": 3.5,
-        "img": "images/雷霆妙尔尼.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/25193K53204.gif"
     },
     {
         "name": "水晶鹿",
         "value": 3.5,
-        "img": "images/水晶鹿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/litimg/151125/16044R554H2.gif"
     },
     {
         "name": "麋鹿",
         "value": 2.5,
-        "img": "images/麋鹿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011I0123533.gif"
     },
     {
         "name": "遁鼠",
         "value": 2.5,
-        "img": "images/遁鼠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011644245T9.gif"
     },
     {
         "name": "灵蔓草王",
         "value": 2.5,
-        "img": "images/灵蔓草王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/0G326222649.gif"
     },
     {
         "name": "冰晶古齿虎",
         "value": 2.5,
-        "img": "images/冰晶古齿虎.jpg"
+        "img": "image/chihu.jpg"
     },
     {
         "name": "幽兰雪魅",
         "value": 2.5,
-        "img": "images/幽兰雪魅.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/2120421164L.gif"
     },
     {
         "name": "魔力猫",
         "value": 2.5,
-        "img": "images/魔力猫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1105/311414151I5.gif"
     },
     {
         "name": "骨龙恶魔",
         "value": 2.5,
-        "img": "images/骨龙恶魔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011F0291b6.gif"
     },
     {
         "name": "云雾犬",
         "value": 2.5,
-        "img": "images/云雾犬.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/03105U0X26.gif"
     },
     {
         "name": "记忆石",
         "value": 2.5,
-        "img": "images/记忆石.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1212/311U02JG4.gif"
     },
     {
         "name": "阿木木",
         "value": 2.5,
-        "img": "images/阿木木.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/241SR250b.gif"
     },
     {
         "name": "暮雪尾兽",
         "value": 2.5,
-        "img": "images/暮雪尾兽.jpg"
+        "img": "image/暮雪尾兽.jpg"
     },
     {
         "name": "闪亮烟花",
         "value": 2.5,
-        "img": "images/闪亮烟花.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1503/041S631F25.gif"
     },
     {
         "name": "诺姆",
         "value": 2.5,
-        "img": "images/诺姆.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/101G0121L5.gif"
     },
     {
         "name": "红莲兽",
         "value": 2.5,
-        "img": "images/红莲兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1209/1413343391P.gif"
     },
     {
         "name": "仙草蘑灵",
         "value": 2.5,
-        "img": "images/仙草蘑灵.jpg"
+        "img": "image/仙草蘑灵.jpg"
     },
     {
         "name": "银翼狮王",
         "value": 2.5,
-        "img": "images/银翼狮王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/221GS1Q53.gif"
     },
     {
         "name": "不屈战魂",
         "value": 2.5,
-        "img": "images/不屈战魂.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011644449393.gif"
     },
     {
         "name": "巨牙猛犸象",
         "value": 2.5,
-        "img": "images/巨牙猛犸象.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/1609454D056.gif"
     },
     {
         "name": "还愿蛇仙",
         "value": 2.5,
-        "img": "images/还愿蛇仙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011413063063.gif"
     },
     {
         "name": "鹦鹉佛",
         "value": 2.5,
-        "img": "images/鹦鹉佛.jpg"
+        "img": "image/鹦鹉佛.jpg"
     },
     {
         "name": "圣诞鸭吉吉",
         "value": 2.5,
-        "img": "images/圣诞鸭吉吉.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/060G50355U.gif"
     },
     {
         "name": "艾酥酥",
         "value": 2.5,
-        "img": "images/艾酥酥.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1305/02160U95049.gif"
     },
     {
         "name": "七彩圣灵",
         "value": 2.5,
-        "img": "images/七彩圣灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/1Z931512211.gif"
     },
     {
         "name": "梦中天使",
         "value": 2.5,
-        "img": "images/梦中天使.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/21205Z42005.gif"
     },
     {
         "name": "雷霆虎王",
         "value": 2.5,
-        "img": "images/雷霆虎王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1311/2015111V035.gif"
     },
     {
         "name": "人鱼守护者",
         "value": 2.5,
-        "img": "images/人鱼守护者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/2302/06143G59151.jpg"
     },
     {
         "name": "大神犬",
         "value": 2.5,
-        "img": "images/大神犬.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011AH23106.gif"
     },
     {
         "name": "多灵主",
         "value": 2.5,
-        "img": "images/多灵主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1202/240H2303T2.gif"
     },
     {
         "name": "武空侠",
         "value": 2.5,
-        "img": "images/武空侠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/2G454213U2.gif"
     },
     {
         "name": "皇家圣光迪莫",
         "value": 2.5,
-        "img": "images/皇家圣光迪莫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/12101J13311.gif"
     },
     {
         "name": "先锋君主",
         "value": 2.5,
-        "img": "images/先锋君主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/251S91Dc0.gif"
     },
     {
         "name": "赤炎守护",
         "value": 2.5,
-        "img": "images/赤炎守护.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1310/311S3053O9.gif"
     },
     {
         "name": "嘟星彩熊",
         "value": 2.5,
-        "img": "images/嘟星彩熊.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1404/301001432F9.gif"
     },
     {
         "name": "岩浆犀牛",
         "value": 2.5,
-        "img": "images/岩浆犀牛.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/1GQ01T9D.gif"
     },
     {
         "name": "玛雅石像鬼",
         "value": 2.5,
-        "img": "images/玛雅石像鬼.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/30140P4H96.gif"
     },
     {
         "name": "花叶龙",
         "value": 2.5,
-        "img": "images/花叶龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1204/051640554560.gif"
     },
     {
         "name": "卡秋莎",
         "value": 2.5,
-        "img": "images/卡秋莎.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011AZc1B.gif"
     },
     {
         "name": "神圣玄武",
         "value": 2.5,
-        "img": "images/神圣玄武.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0116430Y949.gif"
     },
     {
         "name": "猫老大",
         "value": 2.5,
-        "img": "images/猫老大.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/021612553355.gif"
     },
     {
         "name": "圣光迪莫",
         "value": 2.5,
-        "img": "images/圣光迪莫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1306/22103I5YU.gif"
     },
     {
         "name": "幽灵冰姬",
         "value": 2.5,
-        "img": "images/幽灵冰姬.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/291P913A01.gif"
     },
     {
         "name": "暴力猿",
         "value": 2.5,
-        "img": "images/暴力猿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/16150U59263.gif"
     },
     {
         "name": "小恶魔洛基",
         "value": 2.5,
-        "img": "images/小恶魔洛基.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1204/130P9145929.gif"
     },
     {
         "name": "幽冥战龙",
         "value": 2.5,
-        "img": "images/幽冥战龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/1GU5526395.gif"
     },
     {
         "name": "食梦者",
         "value": 2.5,
-        "img": "images/食梦者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1301/041502415J0.gif"
     },
     {
         "name": "富贵呱呱",
         "value": 2.5,
-        "img": "images/富贵呱呱.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/1114201212B.gif"
     },
     {
         "name": "乐罐罐",
         "value": 2.5,
-        "img": "images/乐罐罐.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/1GT3223048.gif"
     },
     {
         "name": "星美",
         "value": 1.5,
-        "img": "images/星美.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/2Q93AJ643.gif"
     },
     {
         "name": "白金独角兽",
         "value": 1.5,
-        "img": "images/白金独角兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0112041OQ9.gif"
     },
     {
         "name": "黄金独角兽",
         "value": 1.5,
-        "img": "images/黄金独角兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0112035b947.gif"
     },
     {
         "name": "青铜独角兽",
         "value": 1.5,
-        "img": "images/青铜独角兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/2914204550H.gif"
     },
     {
         "name": "鱼龙",
         "value": 1.5,
-        "img": "images/鱼龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/30124241D14.gif"
     },
     {
         "name": "加尔",
         "value": 1.5,
-        "img": "images/加尔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1209/2G9214092T.gif"
     },
     {
         "name": "金桑羊",
         "value": 1.5,
-        "img": "images/金桑羊.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1502/11144R3H04.gif"
     },
     {
         "name": "瓦斯叮当",
         "value": 1.5,
-        "img": "images/瓦斯叮当.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011A6191232.gif"
     },
     {
         "name": "魔能小子",
         "value": 1.5,
-        "img": "images/魔能小子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1302/220Q31LA8.gif"
     },
     {
         "name": "梅花鹿",
         "value": 1.5,
-        "img": "images/梅花鹿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011Q031J62.gif"
     },
     {
         "name": "白须菇菇",
         "value": 1.5,
-        "img": "images/白须菇菇.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1110/201P453A03.gif"
     },
     {
         "name": "蝎子王",
         "value": 1.5,
-        "img": "images/蝎子王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1310/110I2594010.gif"
     },
     {
         "name": "风暴战犬",
         "value": 1.5,
-        "img": "images/风暴战犬.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/16161UV494.gif"
     },
     {
         "name": "督察骑士",
         "value": 1.5,
-        "img": "images/督察骑士.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/30140632a62.gif"
     },
     {
         "name": "鳄鱼警长",
         "value": 1.5,
-        "img": "images/鳄鱼警长.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "冷月狼",
         "value": 1.5,
-        "img": "images/冷月狼.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/031Q6363561.gif"
     },
     {
         "name": "梦幻卡洛儿",
         "value": 1.5,
-        "img": "images/梦幻卡洛儿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup//1212/1116262123M.gif"
     },
     {
         "name": "乐动仙女",
         "value": 1.5,
-        "img": "images/乐动仙女.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/111942001W9.gif"
     },
     {
         "name": "藤蔓蛋龙",
         "value": 1.5,
-        "img": "images/藤蔓蛋龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011446415140.gif"
     },
     {
         "name": "触灵飞龙",
         "value": 1.5,
-        "img": "images/触灵飞龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011444409596.gif"
     },
     {
         "name": "水灵兽",
         "value": 1.5,
-        "img": "images/水灵兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/111U15912H.gif"
     },
     {
         "name": "爵士鹿",
         "value": 1.5,
-        "img": "images/爵士鹿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1107/14205551N94.gif"
     },
     {
         "name": "小皮球",
         "value": 1.5,
-        "img": "images/小皮球.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0112092Q643.gif"
     },
     {
         "name": "飞天翼豹",
         "value": 1.5,
-        "img": "images/飞天翼豹.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1308/16103A4IG.gif"
     },
     {
         "name": "巨石之父",
         "value": 1.5,
-        "img": "images/巨石之父.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/291502124247.gif"
     },
     {
         "name": "粉钻兔兔",
         "value": 1.5,
-        "img": "images/粉钻兔兔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/1G13QS016.gif"
     },
     {
         "name": "永夜战龙",
         "value": 1.5,
-        "img": "images/永夜战龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1208/10134TaB0.gif"
     },
     {
         "name": "烟斗船长",
         "value": 1.5,
-        "img": "images/烟斗船长.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1408/201Q92D544.gif"
     },
     {
         "name": "参天蓬蓬",
         "value": 1.5,
-        "img": "images/参天蓬蓬.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0111594I9D.gif"
     },
     {
         "name": "武斗宰相",
         "value": 1.5,
-        "img": "images/武斗宰相.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1110/1412204262A.gif"
     },
     {
         "name": "鲁特",
         "value": 1.5,
-        "img": "images/鲁特.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011HT4W54.gif"
     },
     {
         "name": "怒火兽",
         "value": 1.5,
-        "img": "images/怒火兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/031429343F8.gif"
     },
     {
         "name": "仙音",
         "value": 1.5,
-        "img": "images/仙音.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01121145H59.gif"
     },
     {
         "name": "丰羽嘴龙",
         "value": 1.5,
-        "img": "images/丰羽嘴龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011446091191.gif"
     },
     {
         "name": "痛苦电环",
         "value": 1.5,
-        "img": "images/痛苦电环.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1303/2Z91GR440.gif"
     },
     {
         "name": "霹雳领主",
         "value": 1.5,
-        "img": "images/霹雳领主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/0Q223355K1.gif"
     },
     {
         "name": "灵魂守护",
         "value": 1.5,
-        "img": "images/灵魂守护.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1110/201PI44327.gif"
     },
     {
         "name": "烈火飞龙",
         "value": 1.5,
-        "img": "images/烈火飞龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01143130T50.gif"
     },
     {
         "name": "精灵多哥",
         "value": 1.5,
-        "img": "images/精灵多哥.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/2Q939264N8.gif"
     },
     {
         "name": "饮雪狂兽",
         "value": 1.5,
-        "img": "images/饮雪狂兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1112/221U2461a3.gif"
     },
     {
         "name": "圣诞老人",
         "value": 1.5,
-        "img": "images/圣诞老人.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/191042596056.gif"
     },
     {
         "name": "树人守护",
         "value": 1.5,
-        "img": "images/树人守护.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/26150Z1ZE.gif"
     },
     {
         "name": "帝米亚",
         "value": 1.5,
-        "img": "images/帝米亚.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/031R030R13.gif"
     },
     {
         "name": "伊兰亚龙",
         "value": 1.5,
-        "img": "images/伊兰亚龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1112/151K92VS3.gif"
     },
     {
         "name": "林中鹤仙",
         "value": 1.5,
-        "img": "images/林中鹤仙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1504/0Q95044HV.gif"
     },
     {
         "name": "长弓射手",
         "value": 1.5,
-        "img": "images/长弓射手.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/1GG31044Q.gif"
     },
     {
         "name": "巴斯特",
         "value": 1.5,
-        "img": "images/巴斯特.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "美鹅鹅",
         "value": 1.5,
-        "img": "images/美鹅鹅.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1211/0Q15623RN.gif"
     },
     {
         "name": "念珠鹤",
         "value": 1.5,
-        "img": "images/念珠鹤.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011205021547.gif"
     },
     {
         "name": "绅士鸡",
         "value": 1.5,
-        "img": "images/绅士鸡.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161K5264393.gif"
     },
     {
         "name": "岩凯领主",
         "value": 1.5,
-        "img": "images/岩凯领主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/25133S3E95.gif"
     },
     {
         "name": "炮塔瓢虫",
         "value": 1.5,
-        "img": "images/炮塔瓢虫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1410/091I3339333.gif"
     },
     {
         "name": "格兰球",
         "value": 1.5,
-        "img": "images/格兰球.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1105/311614034103.gif"
     },
     {
         "name": "奇丽果",
         "value": 1.5,
-        "img": "images/奇丽果.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/160U1496416.gif"
     },
     {
         "name": "美豆豆",
         "value": 1.5,
-        "img": "images/美豆豆.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1206/2R2025a038.gif"
     },
     {
         "name": "米花",
         "value": 1.5,
-        "img": "images/米花.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1301/311F05I458.gif"
     },
     {
         "name": "千年雪莲",
         "value": 1.5,
-        "img": "images/千年雪莲.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/030I05444Q.gif"
     },
     {
         "name": "蔓藤兽",
         "value": 1.5,
-        "img": "images/蔓藤兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/3014124O543.gif"
     },
     {
         "name": "绿衣小葵",
         "value": 1.5,
-        "img": "images/绿衣小葵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1107/142049356306.gif"
     },
     {
         "name": "白发露露",
         "value": 1.5,
-        "img": "images/白发露露.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "空灵斗士",
         "value": 1.5,
-        "img": "images/空灵斗士.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/141132249D1.gif"
     },
     {
         "name": "碧翎离朱",
         "value": 1.5,
-        "img": "images/碧翎离朱.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/1ZS501B27.gif"
     },
     {
         "name": "石化木登",
         "value": 1.5,
-        "img": "images/石化木登.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "动感小子",
         "value": 1.5,
-        "img": "images/动感小子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/29140A33515.gif"
     },
     {
         "name": "小天使安琪",
         "value": 1.5,
-        "img": "images/小天使安琪.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1206/0Q001096006.gif"
     },
     {
         "name": "草莓寄居蟹",
         "value": 1.5,
-        "img": "images/草莓寄居蟹.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1408/0G444256206.gif"
     },
     {
         "name": "萤火仙子",
         "value": 1.5,
-        "img": "images/萤火仙子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/051045462B7.gif"
     },
     {
         "name": "冰钻布鲁斯",
         "value": 1.5,
-        "img": "images/冰钻布鲁斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011H91HU2.gif"
     },
     {
         "name": "刺头哭眼鸭",
         "value": 1.5,
-        "img": "images/刺头哭眼鸭.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01154443W19.gif"
     },
     {
         "name": "帕恩",
         "value": 1.5,
-        "img": "images/帕恩.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1208/16163H53532.gif"
     },
     {
         "name": "财神企鹅",
         "value": 1.5,
-        "img": "images/财神企鹅.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1502/1114510064S.gif"
     },
     {
         "name": "红桃雀后",
         "value": 1.5,
-        "img": "images/红桃雀后.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1410/291P1141015.gif"
     },
     {
         "name": "机械蛮牛",
         "value": 1.5,
-        "img": "images/机械蛮牛.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/1Q55H3Y57.gif"
     },
     {
         "name": "瞌睡王",
         "value": 1.5,
-        "img": "images/瞌睡王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "霸道把总",
         "value": 1.5,
-        "img": "images/霸道把总.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "暴角龙",
         "value": 1.5,
-        "img": "images/暴角龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152945D08.gif"
     },
     {
         "name": "火龙大亨",
         "value": 1.5,
-        "img": "images/火龙大亨.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1208/10151Z123a.gif"
     },
     {
         "name": "幽冥之眼",
         "value": 1.5,
-        "img": "images/幽冥之眼.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/30140401F17.gif"
     },
     {
         "name": "脆皮鸡弟弟",
         "value": 1.5,
-        "img": "images/脆皮鸡弟弟.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "脆皮鸡哥哥",
         "value": 1.5,
-        "img": "images/脆皮鸡哥哥.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "蛇王",
         "value": 1.5,
-        "img": "images/蛇王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "神圣青龙",
         "value": 2,
-        "img": "images/神圣青龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1311/2Q002293E7.gif"
     },
     {
         "name": "神圣人鱼",
         "value": 2,
-        "img": "images/神圣人鱼.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/2302/061439562W5.jpg"
     },
     {
         "name": "巨翎天鹅",
         "value": 2,
-        "img": "images/巨翎天鹅.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/16111T24202.gif"
     },
     {
         "name": "绿萝魔灵",
         "value": 2,
-        "img": "images/绿萝魔灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/1119423561N.gif"
     },
     {
         "name": "串鱼巨蟹",
         "value": 2,
-        "img": "images/串鱼巨蟹.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1107/22112U554Q.gif"
     },
     {
         "name": "皇家狮鹫",
         "value": 2,
-        "img": "images/皇家狮鹫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011522505621.gif"
     },
     {
         "name": "上古战龙",
         "value": 2,
-        "img": "images/上古战龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1508/0GA5535009.gif"
     },
     {
         "name": "水球球",
         "value": 2,
-        "img": "images/水球球.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "冰翼邪神",
         "value": 2,
-        "img": "images/冰翼邪神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/10100SG4W.gif"
     },
     {
         "name": "雪影娃娃",
         "value": 2,
-        "img": "images/雪影娃娃.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011H550T14.gif"
     },
     {
         "name": "毁灭笔记",
         "value": 2,
-        "img": "images/毁灭笔记.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/251339403A5.gif"
     },
     {
         "name": "黄蜂后",
         "value": 2,
-        "img": "images/黄蜂后.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01120R45M3.gif"
     },
     {
         "name": "雷神之子",
         "value": 2,
-        "img": "images/雷神之子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1305/1F609493559.gif"
     },
     {
         "name": "光芒使者",
         "value": 2,
-        "img": "images/光芒使者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/211ZP91328.gif"
     },
     {
         "name": "龟仙人",
         "value": 2,
-        "img": "images/龟仙人.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011545125291.gif"
     },
     {
         "name": "爆焰飞龙",
         "value": 2,
-        "img": "images/爆焰飞龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161526153194.gif"
     },
     {
         "name": "大头骨龙",
         "value": 2,
-        "img": "images/大头骨龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "冰霜狼王",
         "value": 2,
-        "img": "images/冰霜狼王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1404/251201031J2.gif"
     },
     {
         "name": "黑炎",
         "value": 2,
-        "img": "images/黑炎.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1308/15161Q13515.gif"
     },
     {
         "name": "万寿芝灵",
         "value": 2,
-        "img": "images/万寿芝灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/030HU16258.gif"
     },
     {
         "name": "琉璃水母",
         "value": 2,
-        "img": "images/琉璃水母.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0115551U325.gif"
     },
     {
         "name": "电子超人",
         "value": 2,
-        "img": "images/电子超人.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011210352W3.gif"
     },
     {
         "name": "矿山金兽",
         "value": 2,
-        "img": "images/矿山金兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1503/111H6332O6.gif"
     },
     {
         "name": "水晶巫师",
         "value": 2,
-        "img": "images/水晶巫师.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/291A004R60.gif"
     },
     {
         "name": "冥狐",
         "value": 2,
-        "img": "images/冥狐.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/2915455HY0.gif"
     },
     {
         "name": "赤炎凯撒",
         "value": 2,
-        "img": "images/赤炎凯撒.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "鬼魅羚羊",
         "value": 2,
-        "img": "images/鬼魅羚羊.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/2914004T524.gif"
     },
     {
         "name": "幽冥紫灯",
         "value": 2,
-        "img": "images/幽冥紫灯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1011/1016312O3H.jpg"
     },
     {
         "name": "天使圣诞鸟",
         "value": 2,
-        "img": "images/天使圣诞鸟.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "迪莫",
         "value": 2,
-        "img": "images/迪莫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/031501451401.gif"
     },
     {
         "name": "石敢当",
         "value": 2,
-        "img": "images/石敢当.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1110/13141042Gb.gif"
     },
     {
         "name": "赤炎耀甲",
         "value": 2,
-        "img": "images/赤炎耀甲.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/3014150454Y.gif"
     },
     {
         "name": "寒翼剑",
         "value": 2,
-        "img": "images/寒翼剑.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/101A54GM4.gif"
     },
     {
         "name": "星耀帝",
         "value": 2,
-        "img": "images/星耀帝.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1307/111F30R096.gif"
     },
     {
         "name": "幻影霸主",
         "value": 2,
-        "img": "images/幻影霸主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011G4553R1.gif"
     },
     {
         "name": "炸弹头领",
         "value": 2,
-        "img": "images/炸弹头领.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1110/211045011323.gif"
     },
     {
         "name": "魔瓜头领",
         "value": 2,
-        "img": "images/魔瓜头领.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/101FZ94C0.gif"
     },
     {
         "name": "水晶巨人",
         "value": 2,
-        "img": "images/水晶巨人.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/1Q03KYb1.gif"
     },
     {
         "name": "欢悦吉他",
         "value": 2,
-        "img": "images/欢悦吉他.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1112/300GJ3V04.gif"
     },
     {
         "name": "酷拉",
         "value": 2,
-        "img": "images/酷拉.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1502/15160ZN119.gif"
     },
     {
         "name": "火麒麟",
         "value": 2,
-        "img": "images/火麒麟.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1401/0910591LQ0.gif"
     },
     {
         "name": "美妖狐",
         "value": 2,
-        "img": "images/美妖狐.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/30140240K14.gif"
     },
     {
         "name": "布莱克岩",
         "value": 2,
-        "img": "images/布莱克岩.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01153113OZ.gif"
     },
     {
         "name": "逍遥呱呱",
         "value": 2,
-        "img": "images/逍遥呱呱.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0114310G501.gif"
     },
     {
         "name": "紫霸龙",
         "value": 2,
-        "img": "images/紫霸龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1303/021129102H5.gif"
     },
     {
         "name": "蓝焰幽灵主",
         "value": 2,
-        "img": "images/蓝焰幽灵主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/291355436113.gif"
     },
     {
         "name": "彩蝶鲨",
         "value": 2,
-        "img": "images/彩蝶鲨.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/10151A29441.gif"
     },
     {
         "name": "凡鹰",
         "value": 2,
-        "img": "images/凡鹰.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/041545119340.gif"
     },
     {
         "name": "骷髅法师",
         "value": 2,
-        "img": "images/骷髅法师.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1107/221129134R3.gif"
     },
     {
         "name": "超能阿布",
         "value": 2,
-        "img": "images/超能阿布.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1212/19204534UI.gif"
     },
     {
         "name": "魔爪圣灵",
         "value": 2,
-        "img": "images/魔爪圣灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/2911342SI5.gif"
     },
     {
         "name": "米陶诺斯",
         "value": 2,
-        "img": "images/米陶诺斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1305/2922061S138.gif"
     },
     {
         "name": "猪蜻蜓",
         "value": 2,
-        "img": "images/猪蜻蜓.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/120K92cc1.gif"
     },
     {
         "name": "魔尾战猫",
         "value": 2,
-        "img": "images/魔尾战猫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1203/160AGXX8.gif"
     },
     {
         "name": "科多索",
         "value": 2,
-        "img": "images/科多索.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1112/300952406042.gif"
     },
     {
         "name": "迷你利乌",
         "value": 2,
-        "img": "images/迷你利乌.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0114491131c.gif"
     },
     {
         "name": "蒜头熊族长",
         "value": 2,
-        "img": "images/蒜头熊族长.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1112/091105402453.gif"
     },
     {
         "name": "圣冠布鲁斯",
         "value": 2,
-        "img": "images/圣冠布鲁斯.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/21195543Q47.gif"
     },
     {
         "name": "雪精灵",
         "value": 2,
-        "img": "images/雪精灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011H945B64.gif"
     },
     {
         "name": "幽蝠王子",
         "value": 2,
-        "img": "images/幽蝠王子.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1212/06201R0Q01.gif"
     },
     {
         "name": "艾不败",
         "value": 2,
-        "img": "images/艾不败.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1304/2510201C2Z.gif"
     },
     {
         "name": "熊猫拳王",
         "value": 2,
-        "img": "images/熊猫拳王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1408/1512405U447.gif"
     },
     {
         "name": "圣诞鸭吉吉",
         "value": 2,
-        "img": "images/圣诞鸭吉吉.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/060G50355U.gif"
     },
     {
         "name": "红萝卜兔",
         "value": 2,
-        "img": "images/红萝卜兔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0110461M549.gif"
     },
     {
         "name": "海洋之神",
         "value": 2,
-        "img": "images/海洋之神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1311/2Q0404b027.gif"
     },
     {
         "name": "仲裁弗兰克",
         "value": 2,
-        "img": "images/仲裁弗兰克.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011GK44112.gif"
     },
     {
         "name": "幽游娃娃",
         "value": 2,
-        "img": "images/幽游娃娃.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/1911393H200.gif"
     },
     {
         "name": "桃面鼠",
         "value": 2,
-        "img": "images/桃面鼠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011G3315A5.gif"
     },
     {
         "name": "超能丘比特",
         "value": 2,
-        "img": "images/超能丘比特.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1309/2GQ34E2X.gif"
     },
     {
         "name": "深海霸主",
         "value": 2,
-        "img": "images/深海霸主.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/251352262U5.gif"
     },
     {
         "name": "烈火狂兽",
         "value": 2,
-        "img": "images/烈火狂兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/30140942A60.gif"
     },
     {
         "name": "智慧帕特拉",
         "value": 2,
-        "img": "images/智慧帕特拉.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/2516250313O.gif"
     },
     {
         "name": "帝王雪狮",
         "value": 2,
-        "img": "images/帝王雪狮.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011I0355611.gif"
     },
     {
         "name": "昏睡纺锤",
         "value": 2,
-        "img": "images/昏睡纺锤.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1210/29141H34K8.gif"
     },
     {
         "name": "恶魔狼蛛",
         "value": 2,
-        "img": "images/恶魔狼蛛.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     },
     {
         "name": "武斗酷猫 无电磁",
         "value": 4,
-        "img": "images/武斗酷猫 无电磁.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/160925292114.gif"
     },
     {
         "name": "雪顶妖兽 无遗传",
         "value": 4,
-        "img": "images/雪顶妖兽 无遗传.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/212010203125.gif"
     },
     {
         "name": "傲雪冰灵 无遗传",
         "value": 4,
-        "img": "images/傲雪冰灵 无遗传.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/2120361CT2.gif"
     },
     {
         "name": "喷火猿 无遗传",
         "value": 4,
-        "img": "images/喷火猿 无遗传.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161515224955.gif"
     },
     {
         "name": "钻石独角兽",
         "value": 4,
-        "img": "images/钻石独角兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1503/1QU22XV8.gif"
     },
     {
         "name": "慈母鼠",
         "value": 4,
-        "img": "images/慈母鼠.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152FT359.gif"
     },
     {
         "name": "罗隐",
         "value": 4,
-        "img": "images/罗隐.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0115300RD4.gif"
     },
     {
         "name": "骄阳耀者",
         "value": 4,
-        "img": "images/骄阳耀者.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/0G93951DA.gif"
     },
     {
         "name": "双生维洛司",
         "value": 4,
-        "img": "images/双生维洛司.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1411/26191JQN1.gif"
     },
     {
         "name": "战伐虎神",
         "value": 4,
-        "img": "images/战伐虎神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1404/091Z920GI.gif"
     },
     {
         "name": "鹿角贝贝",
         "value": 4,
-        "img": "images/鹿角贝贝.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011G9143543.gif"
     },
     {
         "name": "蒸汽神龙",
         "value": 4,
-        "img": "images/蒸汽神龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/0114433124S.gif"
     },
     {
         "name": "暗黑大力神",
         "value": 4,
-        "img": "images/暗黑大力神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1408/2P925322600.gif"
     },
     {
         "name": "极电妖兽",
         "value": 4,
-        "img": "images/极电妖兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/0409313RF1.gif"
     },
     {
         "name": "巨灵石",
         "value": 4,
-        "img": "images/巨灵石.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/22102I61943.gif"
     },
     {
         "name": "白极圣王",
         "value": 4,
-        "img": "images/白极圣王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1406/0511361O5P.gif"
     },
     {
         "name": "公测冰龙王",
         "value": 4,
-        "img": "images/公测冰龙王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1412/1Z911245C5.gif"
     },
     {
         "name": "冰翼晶灵",
         "value": 4,
-        "img": "images/冰翼晶灵.jpg"
+        "img": "image/bingyijingling.jpg"
     },
     {
         "name": "天球",
         "value": 4,
-        "img": "images/天球.jpg"
+        "img": "image/tianqiu.jpg"
     },
     {
         "name": "火云神",
         "value": 5,
-        "img": "images/火云神.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/01152P33304.gif"
     },
     {
         "name": "冰龙王",
         "value": 5,
-        "img": "images/冰龙王.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/1Q45RBc1.gif"
     },
     {
         "name": "图灵",
         "value": 5,
-        "img": "images/图灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1311/021AQY363.gif"
     },
     {
         "name": "武斗酷猫 电磁猫",
         "value": 5,
-        "img": "images/武斗酷猫 电磁猫.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/160925292114.gif"
     },
     {
         "name": "雪顶妖兽",
         "value": 5,
-        "img": "images/雪顶妖兽.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/212010203125.gif"
     },
     {
         "name": "赤炎飞龙",
         "value": 5,
-        "img": "images/赤炎飞龙.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1306/061103515927.gif"
     },
     {
         "name": "英魂修罗",
         "value": 5,
-        "img": "images/英魂修罗.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1403/2009443OQ4.gif"
     },
     {
         "name": "永恒冈尼尔",
         "value": 4.5,
-        "img": "images/永恒冈尼尔.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1407/03103F03639.gif"
     },
     {
         "name": "傲雪冰灵",
         "value": 4.5,
-        "img": "images/傲雪冰灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1405/2120361CT2.gif"
     },
     {
         "name": "喷火猿",
         "value": 4.5,
-        "img": "images/喷火猿.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1207/161515224955.gif"
     },
     {
         "name": "其余宠物",
         "value": 1,
-        "img": "images/其余宠物.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userupundefined"
     }
 ]
-// allPets = allPets.map(item=>{
-//     item.img = ''
-//     return item
-// })

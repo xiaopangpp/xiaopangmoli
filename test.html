@@ -660,7 +660,7 @@
         const card = document.createElement('div');
         card.className = `pet-card ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`;
         card.innerHTML = `
-                <img src="./${pet.img}" alt="${pet.name}" class="pet-img">
+                <img src="./${pet.img}" alt="${pet.name}" class="pet-img" loading="lazy">
                 <div class="pet-name">${pet.name}</div>
                 <div class="pet-value">魔力值: ${pet.value}</div>
             `;
@@ -707,7 +707,7 @@
         const card = document.createElement('div');
         card.className = `pet-card ${isSelected ? 'selected' : ''} ${isSelected ? 'disabled' : ''}`;
         card.innerHTML = `
-                <img src="${pet.img}" alt="${pet.name}" class="pet-img">
+                <img src="${pet.img}" alt="${pet.name}" class="pet-img" loading="lazy">
                 <div class="pet-name">${pet.name}</div>
                 <div class="pet-value">魔力值: ${pet.value}</div>
             `;
@@ -736,7 +736,7 @@
         const card = document.createElement('div');
         card.className = `pet-card ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`;
         card.innerHTML = `
-                <img src="${pet.img}" alt="${pet.name}" class="pet-img">
+                <img src="${pet.img}" alt="${pet.name}" class="pet-img" loading="lazy">
                 <div class="pet-name">${pet.name}</div>
                 <div class="pet-value">魔力值: ${pet.value}</div>
             `;
@@ -804,7 +804,7 @@
         const item = document.createElement('div');
         item.className = 'selected-item';
         item.innerHTML = `
-                <img src="${petValueMap[petName]?.img}" alt="${petName}">
+                <img src="${petValueMap[petName]?.img}" alt="${petName}" loading="lazy">
                 ${petName} (${petValueMap[petName]?.value})
                 <span class="remove-btn" onclick="removePet(${index},event)">×</span>
             `;
@@ -905,7 +905,7 @@
           const petSpan = document.createElement('div');
           petSpan.className = 'history-pet';
           petSpan.innerHTML = `
-                        <img src="${petValueMap[petName].img}" alt="${petName}">
+                        <img src="${petValueMap[petName].img}" alt="${petName}" loading="lazy">
                         ${petName} (${petValueMap[petName]?.value || 0})
                         <span class="remove-btn" onclick="removePetFromHistory(${index}, ${petIndex})">×</span>
                     `;
