@@ -1,4 +1,4 @@
- [
+ var allPets  = [
     {
         "name": "多角铃鹿",
         "value": 3,
