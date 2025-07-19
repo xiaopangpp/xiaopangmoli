@@ -372,7 +372,7 @@ var allPets = [
     {
         "name": "仙草蘑灵",
         "value": 2.5,
-        "img": "image/仙草蘑灵.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/1Q14153I14.gif"
     },
     {
         "name": "银翼狮王",
@@ -397,7 +397,7 @@ var allPets = [
     {
         "name": "鹦鹉佛",
         "value": 2.5,
-        "img": "image/鹦鹉佛.jpg"
+        "img": "https://newsimg.5054399.com/uploads/userup/1402/2G535093215.jpg"
     },
     {
         "name": "圣诞鸭吉吉",
@@ -902,7 +902,7 @@ var allPets = [
     {
         "name": "瞌睡王",
         "value": 1.5,
-        "img": "https://newsimg.5054399.com/uploads/userupundefined"
+        "img": "https://newsimg.5054399.com/uploads/userup/1111/291616319564.gif"
     },
     {
         "name": "霸道把总",
@@ -932,12 +932,12 @@ var allPets = [
     {
         "name": "脆皮鸡哥哥",
         "value": 1.5,
-        "img": "https://newsimg.5054399.com/uploads/userupundefined"
+        "img": "https://newsimg.5054399.com/uploads/userup/1709/2312000514b.gif"
     },
     {
-        "name": "蛇王",
+        "name": "噬梦蛇王",
         "value": 1.5,
-        "img": "https://newsimg.5054399.com/uploads/userupundefined"
+        "img": "https://newsimg.5054399.com/uploads/userup/1409/101A243Z55.gif"
     },
     {
         "name": "神圣青龙",
@@ -977,7 +977,7 @@ var allPets = [
     {
         "name": "水球球",
         "value": 2,
-        "img": "https://newsimg.5054399.com/uploads/userupundefined"
+        "img": "https://newsimg.5054399.com/uploads/userup/1010/1914160E261.jpg"
     },
     {
         "name": "冰翼邪神",
@@ -1082,7 +1082,7 @@ var allPets = [
     {
         "name": "天使圣诞鸟",
         "value": 2,
-        "img": "https://newsimg.5054399.com/uploads/userupundefined"
+        "img": "https://newsimg.5054399.com/uploads/userup/1312/121646163540.gif"
     },
     {
         "name": "迪莫",
