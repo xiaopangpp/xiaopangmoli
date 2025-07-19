@@ -1,4 +1,4 @@
- var allPets  = [
+var allPets = [
     {
         "name": "多角铃鹿",
         "value": 3,
@@ -296,7 +296,7 @@
     },
     {
         "name": "水晶鹿",
-        "value": 3.5,
+        "value": 2,
         "img": "https://newsimg.5054399.com/uploads/litimg/151125/16044R554H2.gif"
     },
     {
@@ -1211,7 +1211,7 @@
     },
     {
         "name": "科多索",
-        "value": 2,
+        "value": 2.5,
         "img": "https://newsimg.5054399.com/uploads/userup/1112/300952406042.gif"
     },
     {
@@ -1458,6 +1458,51 @@
         "name": "喷火猿",
         "value": 4.5,
         "img": "https://newsimg.5054399.com/uploads/userup/1207/161515224955.gif"
+    },
+    {
+        "name": "浆浆兽",
+        "value": 2.5,
+        "img": ""
+    },
+    {
+        "name": "三元兽",
+        "value": 1.5,
+        "img": ""
+    },
+    {
+        "name": "金发锡拉",
+        "value": 2,
+        "img": "https://newsimg.5054399.com/uploads/userup/1108/11093U1J51.gif"
+    },
+    {
+        "name": "认输猴",
+        "value": 2,
+        "img": "https://newsimg.5054399.com/uploads/userup/1701/141451216095.gif"
+    },
+    {
+        "name": "紫冥狐",
+        "value": 2,
+        "img": "https://newsimg.5054399.com/uploads/userup/1202/1G144322Q1.gif"
+    },
+    {
+        "name": "冥暗领主（幽王三阶）",
+        "value": 2.5,
+        "img": "https://newsimg.5054399.com/uploads/userup/1410/01153003Q25.gif"
+    },
+    {
+        "name": "夜巨魔",
+        "value": 1.5,
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011A3043927.gif"
+    },
+    {
+        "name": "乌拉塔",
+        "value": 2,
+        "img": "https://newsimg.5054399.com/uploads/userup/1106/011I614R06.gif"
+    },
+    {
+        "name": "大尾倒行兽",
+        "value": 2,
+        "img": "https://newsimg.5054399.com/uploads/userup/1109/0Q2351543K.gif"
     },
     {
         "name": "其余宠物",
